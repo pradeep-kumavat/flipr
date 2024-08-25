@@ -67,7 +67,7 @@ export default function AdminPage() {
             </table>
           </div>
         )}
-        <div className='bg-custom-green w-80 my-4 py-2 px-5 my-10 rounded '>
+        <div className='bg-custom-green w-80  py-2 px-5 my-10 rounded '>
         <Link href="/admin/investments">
         Add new Investment Opportunities
         </Link>
