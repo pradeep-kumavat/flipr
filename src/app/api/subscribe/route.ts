@@ -1,7 +1,12 @@
 import {connect} from "@/dbConfig/dbConnect";
 import SubscribeEmail from "@/models/subscribeModel";
+import mongoose from "mongoose";
 import { NextRequest, NextResponse } from "next/server";
 
+type EmailDoc = {
+    _id: string;
+    email: string;
+  };
 
 export async function POST(request: NextRequest){
     try {
@@ -28,3 +33,19 @@ export async function POST(request: NextRequest){
         return NextResponse.json({error: error.message}, {status: 500})
     }
 }      
+
+export async function GET(request: NextRequest){
+    try {
+        await connect();
+        const response :any = await SubscribeEmail.find({})
+  
+        return NextResponse.json({
+            message: "Email retrieved",
+            success: true,
+            response
+        })
+        
+    } catch (error: any) {
+        return NextResponse.json({error: error.message}, {status: 500})
+    }
+}

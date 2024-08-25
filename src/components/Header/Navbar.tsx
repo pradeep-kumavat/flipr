@@ -10,8 +10,8 @@ import toast from 'react-hot-toast';
 export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter()
-  const hideAuthButtons = pathname === '/login' || pathname === '/signup'  || pathname === '/investments';
-  const showLogoutButton = pathname === '/investments';
+  const hideAuthButtons = pathname === '/login' || pathname === '/signup' || pathname === '/admin/investments';
+  const showLogoutButton = pathname === '/admin/investments';
 
   const logout = async () => {
     try {

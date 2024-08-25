@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 
 
 export default function AddInvestment(){
@@ -38,6 +37,7 @@ export default function AddInvestment(){
     }
   }
 
+
   return (
     <>
     <Toaster />
@@ -62,7 +62,7 @@ export default function AddInvestment(){
 
         <div className="form-group">
           <label htmlFor="cardImage" className="block text-sm font-medium text-gray-700">
-            Card Image URL
+            Card Image
           </label>
           <input
             type="url"
@@ -71,7 +71,7 @@ export default function AddInvestment(){
             value={investment.cardImage}
             onChange={(e)=> setInvestment({...investment, cardImage:e.target.value })} 
             className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-black"
-            required
+            required 
           />
         </div>
 

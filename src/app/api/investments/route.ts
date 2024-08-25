@@ -22,7 +22,7 @@ export async function POST(request: NextRequest){
 
         const newCard = new Card({
           tag,
-          cardImage,
+          cardImage : "https://picsum.photos/200/300",
           title,
           location,
           description,
@@ -47,4 +47,20 @@ export async function POST(request: NextRequest){
     } catch (error: any) {
         return NextResponse.json({error: error.message}, {status: 500})
     }
-}      
+}    
+
+export async function GET(request: NextRequest){
+    try {
+        await connect();
+        const response = await Card.find({})
+
+        return NextResponse.json({
+            message: "Card Retrieved successfully",
+            success: true,
+            response
+        })
+        
+    } catch (error: any) {
+        return NextResponse.json({error: error.message}, {status: 500})
+    }
+}     
