@@ -12,7 +12,7 @@ const OfferInvestment = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response:any = await axios.get('/api/admin/investments'); 
+        const response:any = await axios.get('/app/admin/investments'); 
         console.log(response.data)
         if (response.data.success) {
           setCards(response.data.response); 
@@ -26,7 +26,7 @@ const OfferInvestment = () => {
     };
     
     fetchData();
-  },);
+  },[]);
 
   return (
     <div className='overflow-hidden bg-white'>
