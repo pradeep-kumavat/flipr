@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="relative min-h-screen overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src={'/Images/frontPagebg.svg'}
+            src={'/images/frontPagebg.svg'}
             alt="heroBg"
             layout="fill"
             objectFit="cover"
