@@ -12,7 +12,7 @@ const OfferInvestment = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response:any = await axios.get('/app/admin/investments'); 
+        const response:any = await axios.get('/api/investments'); 
         console.log(response.data)
         if (response.data.success) {
           setCards(response.data.response); 
