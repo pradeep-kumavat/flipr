@@ -26,7 +26,7 @@ const OfferInvestment = () => {
     };
     
     fetchData();
-  },[]);
+  });
 
   return (
     <div className='overflow-hidden bg-white'>
