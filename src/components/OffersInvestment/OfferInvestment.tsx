@@ -25,15 +25,14 @@ const OfferInvestment = () => {
       }
     };
     
-
     fetchData();
-  }, []);
+  },);
 
   return (
     <div className='overflow-hidden bg-white'>
       <div className='main-covering-tag flex items-center lg:ml-20 pb-20'>
         <div className='side-image'>
-          <Image src={'/images/shape.svg'} alt='' width={200} height={200} />
+          <Image src={'/images/Shape.svg'} alt='' width={200} height={200} />
         </div>
 
         <div className='flex flex-col'>
