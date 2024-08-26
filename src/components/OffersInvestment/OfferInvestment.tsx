@@ -8,23 +8,23 @@ const OfferInvestment = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
   const [cards, setCards] = useState<any[]>([]); 
 
+  const fetchData = async () => {
+    try {
+      const response:any = await axios.get('/api/investments'); 
+      console.log(response.data)
+      if (response.data.success) {
+        setCards(response.data.response); 
+        console.log(response)
+      } else {
+        console.error("Failed to retrieve cards.");
+      }
+    } catch (error) {
+      console.error("Error fetching cards:", error);
+    }
+  };
+  
   // Fetch card data from backend using Axios
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response:any = await axios.get('/api/investments'); 
-        console.log(response.data)
-        if (response.data.success) {
-          setCards(response.data.response); 
-          console.log(response)
-        } else {
-          console.error("Failed to retrieve cards.");
-        }
-      } catch (error) {
-        console.error("Error fetching cards:", error);
-      }
-    };
-    
     fetchData();
   },[]);
 
