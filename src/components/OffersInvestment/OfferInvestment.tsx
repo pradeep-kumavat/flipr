@@ -114,7 +114,7 @@ const OfferInvestment = () => {
                 </div>
               ))
             ) : (
-              <p className='text-center'>Loading cards...</p>
+              <p className='text-center text-black'>Loading cards...</p>
             )}
           </div>
 
