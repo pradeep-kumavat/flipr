@@ -17,7 +17,7 @@ export default function Hero() {
         </div>
         <div className="absolute bottom-0 right-0">
           <Image
-            src={'/Images/frontPagelines.svg'}
+            src={'/images/frontPagelines.svg'}
             alt="herolines"
             width={400}
             height={600}
@@ -26,7 +26,7 @@ export default function Hero() {
         </div>
         <div className="absolute z-20 left-[190px] top-20">
           <Image
-            src={'/Images/frontPagecircle.svg'}
+            src={'/images/frontPagecircle.svg'}
             alt=''
             width={380}
             height={300} />

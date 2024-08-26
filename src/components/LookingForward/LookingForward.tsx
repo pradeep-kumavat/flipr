@@ -23,10 +23,10 @@ const LookingForward = () => {
             </div>          
           </div>
           <div className='2 -ml-8'>
-            <Image src={'/Images/2.svg'} alt='' width={350} height={350}/>
+            <Image src={'/images/2.svg'} alt='' width={350} height={350}/>
           </div>
           <div className='3 flex -mt-[10rem]'>
-          <Image src={'/Images/shape.svg'} alt='' width={200} height={200}/>
+          <Image src={'/images/shape.svg'} alt='' width={200} height={200}/>
           </div>
         </div>
         </div>
