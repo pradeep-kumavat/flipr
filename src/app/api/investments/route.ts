@@ -52,7 +52,7 @@ export async function POST(request: NextRequest){
 export async function GET(request: NextRequest){
     try {
         await connect();
-        const response = await Card.find({})
+        const response = await Card.find()
 
         return NextResponse.json({
             message: "Card Retrieved successfully",
