@@ -22,7 +22,7 @@ export default function login() {
 
       console.log("Login success", response.data)
       
-      router.push("/investments")
+      router.push("/admin")
 
     } catch (error:any) {
       console.error("Signup failed ",error);

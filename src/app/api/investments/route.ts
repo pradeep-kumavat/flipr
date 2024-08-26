@@ -22,7 +22,7 @@ export async function POST(request: NextRequest){
 
         const newCard = new Card({
           tag,
-          cardImage : "https://picsum.photos/200/300",
+          cardImage : "https://picsum.photos/500/550",
           title,
           location,
           description,

@@ -10,13 +10,13 @@ import toast from 'react-hot-toast';
 export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter()
-  const hideAuthButtons = pathname === '/login' || pathname === '/signup' || pathname === '/admin/investments';
-  const showLogoutButton = pathname === '/admin/investments';
+  const hideAuthButtons = pathname === '/login' || pathname === '/signup' || pathname === '/admin' || pathname === '/admin/investments';
+  const showLogoutButton = pathname === '/admin/investments' || pathname === '/admin';
 
   const logout = async () => {
     try {
         await axios.get('/api/logout')
-        router.push('/login')
+        router.push('/')
     } catch (error:any) {
         console.log(error.message);
         toast.error(error.message)

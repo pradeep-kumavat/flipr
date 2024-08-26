@@ -1,13 +1,19 @@
 'use client'
 import React from "react";
 import Hero from "@/components/Hero/Hero";
-import Chart from "@/components/Chart/Chart"
+import OfferInvestment from "@/components/OffersInvestment/OfferInvestment";
+import Dashboard from "@/components/Dashboard/Dashboard";
+import LookingForward from "@/components/LookingForward/LookingForward";
 
 export default function Home() {
   return (
     <>
-    <Hero/>
-    <Chart/>
+    <div className="min-h-screen w-full ">
+      <Hero />
+      <OfferInvestment/>
+      <Dashboard/>
+      <LookingForward/>
+    </div>
     </>
   );
 }
