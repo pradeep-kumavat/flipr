@@ -24,7 +24,7 @@ const Dashboard = () => {
 
 					</div>
 					<div className='second mt-20'>
-						<Image src={'iImages/16.svg'} alt='' width={500} height={500} />
+						<Image src={'images/16.svg'} alt='' width={500} height={500} />
 					</div>
 					{/* </div> */}
 					<div className='third flex flex-col gap-y-60 ml-16 '>
